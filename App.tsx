@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, SafeAreaView } from 'react-native';
 
 import * as SplashScreen from 'expo-splash-screen';
 
@@ -8,10 +8,11 @@ import MyStack from './src/navigations/app-navigator.js'
 export default function App() {
   const [stuffToReturnHere, setLoadingComplete] = React.useState(false);
 
+  /*
   React.useEffect(() => {
     async function loadResourcesAndDataAsync() {
       try {
-        SplashScreen.preventAutoHideAsync();
+        // SplashScreen.preventAutoHideAsync();
         // TODO: Load stuff here
       } catch (e) {
         console.warn(e);
@@ -23,10 +24,13 @@ export default function App() {
 
     loadResourcesAndDataAsync();
   }, []);
+  */
 
 
   return (
-    <MyStack />
+    <SafeAreaView>
+      <Text>Testing</Text>
+    </SafeAreaView>
   );
 }
 
