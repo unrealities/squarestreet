@@ -6,7 +6,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import MyStack from './src/navigations/app-navigator.js'
 
 export default function App() {
-  const [stuffToReturnHere, setLoadingComplete] = React.useState(false);
+  // const [stuffToReturnHere, setLoadingComplete] = React.useState(false);
 
   /*
   React.useEffect(() => {
@@ -26,6 +26,7 @@ export default function App() {
   }, []);
   */
 
+  console.log("is there anybody out there?");
 
   return (
     <SafeAreaView>
