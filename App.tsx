@@ -1,11 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
-import * as SplashScreen from 'expo-splash-screen';
+// import * as SplashScreen from 'expo-splash-screen';
 
-import MyStack from './src/navigations/app-navigator.js'
+// import MyStack from './src/navigations/app-navigator.js'
 
-export default function App() {
+export default class App extends React.Component {
   // const [stuffToReturnHere, setLoadingComplete] = React.useState(false);
 
   /*
@@ -26,13 +26,14 @@ export default function App() {
   }, []);
   */
 
-  console.log("is there anybody out there?");
-
-  return (
-    <SafeAreaView>
-      <Text>Testing</Text>
-    </SafeAreaView>
-  );
+  render() {
+    console.log("is there anybody out there?");
+    return (
+      <View>
+        <Text>Testing</Text>
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
