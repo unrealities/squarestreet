@@ -1,14 +1,10 @@
 import React from 'react';
-import { Text, View } from 'react-native';
-import { styles } from './src/styles/index';
+import { MyStack } from './src/navigations/app-navigator.js'
 
 export default class App extends React.Component {
   render() {
-    console.log("render in App");
     return (
-      <View style = { styles }>
-        <Text>Testing</Text>
-      </View>
+      <MyStack />
     );
   }
 };
