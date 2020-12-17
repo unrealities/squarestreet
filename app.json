@@ -2,11 +2,12 @@
   "name": "squarestreet",
   "displayName": "squarestreet",
   "expo": {
-    "name": "squarestreet",
-    "slug": "squarestreet",
-    "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "entryPoint": "./src/index.js",
+    "name": "squarestreet",
+    "slug": "squarestreet",
+    "version": "1.0.0"
   }
 }
