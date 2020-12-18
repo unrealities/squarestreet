@@ -1,4 +1,9 @@
-const HomeScreen = ({ navigation }) => {
+import React from 'react';
+import { Button, Text, View } from 'react-native';
+
+import { styles } from '../../styles';
+
+export const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text>What needs to be done?</Text>
@@ -29,5 +34,3 @@ const HomeScreen = ({ navigation }) => {
     </View>
   );
 };
-
-export default HomeScreen;
