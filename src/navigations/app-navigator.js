@@ -14,7 +14,7 @@ export const MyStack = () => {
         <Stack.Screen
           name="Home"
           component={HomeScreen}
-          options={{ title: 'Welcome' }}
+          options={{ title: 'Square Street' }}
         />
         <Stack.Screen name="Profile" component={ProfileScreen} />
       </Stack.Navigator>
