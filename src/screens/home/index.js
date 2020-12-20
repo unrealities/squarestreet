@@ -1,8 +1,11 @@
 import React from 'react';
-import { Button, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+import { styles } from '../../styles';
 
 export const HomeScreen = ({ navigation }) => {
-  <View>
-    <Text>Welcome To Square Street</Text>
-  </View>
+  return (
+    <View style={styles.container}>
+      <Text>Welcome To Square Street</Text>
+    </View>
+  );
 };
