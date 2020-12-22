@@ -5,7 +5,7 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "entryPoint": "./src/index.js",
+    "entryPoint": "./src/index.tsx",
     "name": "squarestreet",
     "slug": "squarestreet",
     "version": "1.0.0"
