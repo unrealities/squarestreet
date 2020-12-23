@@ -1,10 +1,8 @@
-import React from 'react';
-import { MyStack } from './src/navigations/app-navigator.js'
+import React from "react";
+import { MyStack } from "./src/navigations/app-navigator";
 
 export default class App extends React.Component {
   render() {
-    return (
-      <MyStack />
-    );
+    return <MyStack />;
   }
-};
+}

@@ -1,5 +1,5 @@
-import { Button, Text, View } from 'react-native';
-import { styles } from '../../styles';
+import { Button, Text, View } from "react-native";
+import { styles } from "../../styles";
 
 const AboutScreen = () => (
   <View style={styles.container}>
@@ -8,7 +8,9 @@ const AboutScreen = () => (
     <Text>Should be able to login via Google, +++</Text>
     <Text>Should show user what events they can enter</Text>
     <Text>Should be able to enter an event if available</Text>
-    <Text>Should provide admin functionality for leagues and custom events</Text>
+    <Text>
+      Should provide admin functionality for leagues and custom events
+    </Text>
     <Text>Server</Text>
     <Text>Need to cache sporting event statuses</Text>
     <Text>Need to persist users</Text>
@@ -24,9 +26,7 @@ const AboutScreen = () => (
 
     <Button
       title="Go to profile"
-      onPress={() =>
-        navigation.navigate('Profile', { name: 'Jane' })
-      }
+      onPress={() => navigation.navigate("Profile", { name: "Jane" })}
     />
   </View>
 );
