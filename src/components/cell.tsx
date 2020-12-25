@@ -2,7 +2,8 @@ import React from "react";
 import { Text, View } from "react-native";
 
 type BaseCellProps = {
-  id: Number
+  row: Number,
+  col: Number
 }
 
 export class BaseCell extends React.Component<BaseCellProps> {
@@ -13,7 +14,7 @@ export class BaseCell extends React.Component<BaseCellProps> {
   render() {
     return (
       <View>
-        <Text>{this.props.id}</Text>
+        <Text>{this.props.row} {this.props.col}</Text>
       </View>
     );
   }

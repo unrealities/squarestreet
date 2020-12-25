@@ -6,8 +6,10 @@ import { BaseCell } from "../../components/cell";
 export const HomeScreen = ({ navigation }) => {
   const cells = [];
 
-  for (let i=0; i<=10; i++){
-    cells.push(<BaseCell id={i} />);
+  for (let r=0; r<=10; r++){
+    for (let c=0; c<=10; c++){
+      cells.push(<BaseCell row={r} col={c}/>);
+    }
   }
 
   return (
