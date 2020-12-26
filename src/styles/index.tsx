@@ -8,4 +8,9 @@ export const styles = StyleSheet.create({
     font: 24,
     justifyContent: "center",
   },
+  cellText: {
+    fontSize: 18,
+    fontWeight: "bold",
+    textAlign: "center"
+  }
 });

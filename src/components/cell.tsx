@@ -1,6 +1,8 @@
 import React from "react";
 import { Text, View } from "react-native";
 
+import { styles } from "../styles";
+
 type BaseCellProps = {
   row: Number,
   col: Number
@@ -14,7 +16,7 @@ export class BaseCell extends React.Component<BaseCellProps> {
   render() {
     return (
       <View>
-        <Text>{this.props.row} {this.props.col}</Text>
+        <Text style={styles.cellText}>{this.props.row} {this.props.col}</Text>
       </View>
     );
   }
