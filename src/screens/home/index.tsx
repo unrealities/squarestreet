@@ -16,7 +16,7 @@ export const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text>Welcome To Square Street</Text>
-      {cells}
+      <View style={styles.cellGridContainer}>{cells}</View>
     </View>
   );
 };

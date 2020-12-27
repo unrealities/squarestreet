@@ -15,7 +15,7 @@ export class BaseCell extends React.Component<BaseCellProps> {
 
   render() {
     return (
-      <View>
+      <View style={styles.cellContainer}>
         <Text style={styles.cellText}>{this.props.row} {this.props.col}</Text>
       </View>
     );
