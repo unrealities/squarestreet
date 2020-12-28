@@ -9,13 +9,13 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
   },
   cellContainer: {
-    height: 50,
-    width: 50
+    height: 40,
+    width: "9%"
   },
   cellGridContainer: {
-    alignContent: "stretch",
+    alignContent: "center",
     flex: 1,
-    flexDirection: "column",
+    flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center"
   },
