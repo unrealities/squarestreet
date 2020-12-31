@@ -2,7 +2,7 @@ import React from "react";
 import { View } from "react-native";
 
 import { styles } from "../styles";
-import { ScoreCell } from "./cell";
+import { BaseCell, ScoreCell } from "./cell";
 
 export class CellGrid extends React.Component<{}> {
   constructor({}) {
@@ -17,6 +17,23 @@ export class CellGrid extends React.Component<{}> {
         cells.push(<ScoreCell row={r} col={c} />);
       }
     }
-    return <View style={styles.cellGridContainer}>{cells}</View>;
+    return (
+      <View style={styles.cellGridContainer}>
+        <HeaderCells />
+        {cells}
+      </View>
+    )
+  }
+}
+
+export class HeaderCells extends React.Component {
+  render() {
+    const cells = [];
+
+    for (let i = 0; i <= 10; i++) {
+      cells.push(<BaseCell val={i.toString()} />);
+    }
+
+    return <View style={styles.cellGridContainer}>{cells}</View>
   }
 }
