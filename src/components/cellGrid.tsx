@@ -34,6 +34,6 @@ export class HeaderCells extends React.Component {
       cells.push(<BaseCell val={i.toString()} />);
     }
 
-    return <View style={styles.cellGridContainer}>{cells}</View>
+    return <View style={styles.cellGridHeader}>{cells}</View>
   }
 }

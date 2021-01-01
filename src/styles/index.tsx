@@ -19,6 +19,11 @@ export const styles = StyleSheet.create({
     flexWrap: "wrap",
     justifyContent: "center"
   },
+  cellGridHeader: {
+    flexDirection: "row",
+    textAlign: "center",
+    width: "100%"
+  },
   cellText: {
     fontSize: 18,
     fontWeight: "bold",
