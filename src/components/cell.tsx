@@ -1,11 +1,17 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text, View, ViewStyle } from "react-native";
 
 import { styles } from "../styles";
 
 type BaseCellProps = {
+  styleSheet: ViewStyle;
   val: String;
 };
+
+type HeaderCellProps = {
+  val: String;
+};
+
 
 type ScoreCellProps = {
   row: Number;
@@ -19,7 +25,7 @@ export class BaseCell extends React.Component<BaseCellProps> {
 
   render() {
     return (
-      <View style={styles.cellContainer}>
+      <View style={this.props.styleSheet}>
         <Text style={styles.cellText}>{this.props.val}</Text>
       </View>
     );
@@ -32,6 +38,16 @@ export class ScoreCell extends React.Component<ScoreCellProps> {
   }
 
   render() {
-    return <BaseCell val={this.props.row + " " + this.props.col} />;
+    return <BaseCell styleSheet={styles.cellContainer} val={this.props.row + " " + this.props.col} />;
+  }
+}
+
+export class HeaderCell extends React.Component<HeaderCellProps> {
+  constructor(props: HeaderCellProps) {
+    super(props);
+  }
+
+  render() {
+    return <BaseCell styleSheet={styles.cellContainer} val={this.props.val} />;
   }
 }
