@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
   },
   cellContainer: {
     height: 40,
-    width: "9%"
+    width: "8.3%"
   },
   cellGridContainer: {
     alignContent: "center",
@@ -23,6 +23,11 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     textAlign: "center",
     width: "100%"
+  },
+  cellHeader: {
+    font: 32,
+    height: 40,
+    width: "8.3%"
   },
   cellText: {
     fontSize: 18,

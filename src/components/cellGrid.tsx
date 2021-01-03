@@ -13,9 +13,7 @@ export class CellGrid extends React.Component<{}> {
     const cells = [];
 
     for (let r = 0; r <= 10; r++) {
-      if (r>0) {
-        cells.push(<HeaderCell val={r.toString()} />);
-      }
+      cells.push(<HeaderCell val={r.toString()} />);
       for (let c = 0; c <= 10; c++) {
         cells.push(<ScoreCell row={r} col={c} />);
       }
@@ -31,7 +29,7 @@ export class CellGrid extends React.Component<{}> {
 
 export class RowHeaderCells extends React.Component {
   render() {
-    const cells = [];
+    const cells = [<HeaderCell val="" />];
 
     for (let i = 0; i <= 10; i++) {
       cells.push(<HeaderCell val={i.toString()} />);

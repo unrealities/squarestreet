@@ -48,6 +48,6 @@ export class HeaderCell extends React.Component<HeaderCellProps> {
   }
 
   render() {
-    return <BaseCell styleSheet={styles.cellContainer} val={this.props.val} />;
+    return <BaseCell styleSheet={styles.cellHeader} val={this.props.val} />;
   }
 }
