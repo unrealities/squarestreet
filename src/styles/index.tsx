@@ -10,28 +10,27 @@ export const styles = StyleSheet.create({
   },
   cellContainer: {
     height: 40,
-    width: "8.3%"
+    width: "8.3%",
   },
   cellGridContainer: {
     alignContent: "center",
     flex: 1,
     flexDirection: "row",
     flexWrap: "wrap",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   cellGridHeader: {
     flexDirection: "row",
     textAlign: "center",
-    width: "100%"
+    width: "100%",
   },
-  cellHeader: {
-    font: 32,
-    height: 40,
-    width: "8.3%"
+  cellHeaderText: {
+    fontSize: 24,
+    fontWeight: "bold",
+    textAlign: "center",
   },
   cellText: {
     fontSize: 18,
-    fontWeight: "bold",
-    textAlign: "center"
-  }
+    textAlign: "center",
+  },
 });
