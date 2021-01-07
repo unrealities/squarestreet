@@ -15,7 +15,7 @@ export class CellGrid extends React.Component<{}> {
         <RowHeaderCells />
         <Cells />
       </View>
-    )
+    );
   }
 }
 
@@ -30,7 +30,7 @@ export class Cells extends React.Component {
       }
     }
 
-    return cells
+    return cells;
   }
 }
 
@@ -42,6 +42,6 @@ export class RowHeaderCells extends React.Component {
       cells.push(<HeaderCell val={i.toString()} />);
     }
 
-    return <View style={styles.cellGridHeader}>{cells}</View>
+    return <View style={styles.cellGridHeader}>{cells}</View>;
   }
 }
