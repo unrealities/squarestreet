@@ -19,6 +19,6 @@ export default class App extends React.Component {
 
     console.log(selections);
 
-    return <MyStack />;
+    return <MyStack selections={selections}/>;
   }
 }
