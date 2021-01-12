@@ -3,26 +3,38 @@ import { View } from "react-native";
 
 import { styles } from "../styles";
 import { HeaderCell, ScoreCell } from "./cell";
+import Selection from "../services/selection";
 
-export class CellGrid extends React.Component<{}> {
-  constructor({}) {
-    super({});
+type CellProps = {
+  selections: Selection[];
+};
+
+type CellGridProps = {
+  selections: Selection[];
+};
+export class CellGrid extends React.Component<CellGridProps> {
+  constructor(props: CellGridProps) {
+    super(props);
   }
 
   render() {
     return (
       <View style={styles.cellGridContainer}>
         <RowHeaderCells />
-        <Cells />
+        <Cells selections={selections} />
       </View>
     );
   }
 }
 
-export class Cells extends React.Component {
+export class Cells extends React.Component<CellProps> {
+  constructor(props: CellProps) {
+    super(props);
+  }
   render() {
     const cells = [];
 
+    // TODO: insert selection data
     for (let r = 0; r <= 10; r++) {
       cells.push(<HeaderCell val={r.toString()} />);
       for (let c = 0; c <= 10; c++) {
