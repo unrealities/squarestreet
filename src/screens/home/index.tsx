@@ -4,6 +4,8 @@ import { View } from "react-native";
 import { styles } from "../../styles";
 import { CellGrid } from "../../components/cellGrid";
 
+import Selection from "../../services/selection";
+
 export const HomeScreen = ({ navigation }) => {
   // TODO: Generate random players with selections
   const players = ["Abe", "Betty", "Carl", "Diana", "Edward"];

@@ -16,6 +16,7 @@ type HeaderCellProps = {
 type ScoreCellProps = {
   row: Number;
   col: Number;
+  display: String;
 };
 
 export class BaseCell extends React.Component<BaseCellProps> {
@@ -41,7 +42,7 @@ export class ScoreCell extends React.Component<ScoreCellProps> {
     return (
       <BaseCell
         vStyle={styles.cellContainer}
-        val={this.props.row + " " + this.props.col}
+        val={this.props.row + " " + this.props.col + " " + this.props.display}
         tStyle={styles.cellText}
       />
     );

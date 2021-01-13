@@ -21,7 +21,7 @@ export class CellGrid extends React.Component<CellGridProps> {
     return (
       <View style={styles.cellGridContainer}>
         <RowHeaderCells />
-        <Cells selections={selections} />
+        <Cells selections={this.props.selections} />
       </View>
     );
   }
@@ -33,12 +33,16 @@ export class Cells extends React.Component<CellProps> {
   }
   render() {
     const cells = [];
+    let s = 0;
+
+    console.log(this.props.selections);
 
     // TODO: insert selection data
     for (let r = 0; r <= 10; r++) {
       cells.push(<HeaderCell val={r.toString()} />);
       for (let c = 0; c <= 10; c++) {
-        cells.push(<ScoreCell row={r} col={c} />);
+        cells.push(<ScoreCell row={r} col={c} display="this.props.selections[s].player" />);
+        s++;
       }
     }
 
