@@ -7,7 +7,6 @@ import { CellGrid } from "../../components/cellGrid";
 import Selection from "../../services/selection";
 
 export const HomeScreen = ({ navigation }) => {
-  // TODO: Generate random players with selections
   const players = ["Abe", "Betty", "Carl", "Diana", "Edward"];
   const selections = [];
 
@@ -19,11 +18,9 @@ export const HomeScreen = ({ navigation }) => {
     }
   }
 
-  console.log(selections);
-
   return (
     <View style={styles.container}>
-      <CellGrid selection={selections} />
+      <CellGrid selections={selections} />
     </View>
   );
 };

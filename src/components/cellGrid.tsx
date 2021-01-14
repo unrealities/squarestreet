@@ -30,6 +30,7 @@ export class CellGrid extends React.Component<CellGridProps> {
 export class Cells extends React.Component<CellProps> {
   constructor(props: CellProps) {
     super(props);
+    const selections = this.props.selections;
   }
   render() {
     const cells = [];
@@ -41,7 +42,7 @@ export class Cells extends React.Component<CellProps> {
     for (let r = 0; r <= 10; r++) {
       cells.push(<HeaderCell val={r.toString()} />);
       for (let c = 0; c <= 10; c++) {
-        cells.push(<ScoreCell row={r} col={c} display="this.props.selections[s].player" />);
+        cells.push(<ScoreCell row={r} col={c} display={selections[s].player} />);
         s++;
       }
     }
