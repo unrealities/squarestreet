@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
   },
   cellContainer: {
     height: 40,
-    width: "8.3%",
+    width: "9%",
   },
   cellGridContainer: {
     alignContent: "center",

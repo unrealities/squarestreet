@@ -40,11 +40,9 @@ export class Cells extends React.Component<CellsProps, CellsState> {
     const cells = [];
     let s = 0;
 
-    // TODO: insert selection data
     for (let r = 0; r < 10; r++) {
       cells.push(<HeaderCell val={r.toString()} />);
       for (let c = 0; c < 10; c++) {
-        console.log("Cells: " + JSON.stringify(this.state.selections[s]));
         cells.push(<ScoreCell row={r} col={c} display={this.state.selections[s].player} />);
         s++;
       }
@@ -58,7 +56,7 @@ export class RowHeaderCells extends React.Component {
   render() {
     const cells = [<HeaderCell val="" />];
 
-    for (let i = 0; i <= 10; i++) {
+    for (let i = 0; i < 10; i++) {
       cells.push(<HeaderCell val={i.toString()} />);
     }
 
