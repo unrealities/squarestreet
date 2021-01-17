@@ -7,7 +7,7 @@ import { CellGrid } from "../../components/cellGrid";
 import Selection from "../../services/selection";
 
 export const HomeScreen = ({ navigation }) => {
-  const players = ["Abe", "Betty", "Carl", "Diana", "Edward"];
+  const players = ["Abe", "Betty", "Carl", "Diana", "Edward", " "];
   const selections = [];
 
   for (let r = 0; r < 10; r++) {

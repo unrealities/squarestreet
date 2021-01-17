@@ -42,7 +42,7 @@ export class ScoreCell extends React.Component<ScoreCellProps> {
     return (
       <BaseCell
         vStyle={styles.cellContainer}
-        val={this.props.row + " " + this.props.col + " " + this.props.display}
+        val={this.props.display}
         tStyle={styles.cellText}
       />
     );
