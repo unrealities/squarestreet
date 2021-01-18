@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, TextStyle, View, ViewStyle } from "react-native";
+import { Alert, Button, Text, TextStyle, View, ViewStyle } from "react-native";
 
 import { styles } from "../styles";
 
@@ -7,6 +7,10 @@ type BaseCellProps = {
   vStyle: ViewStyle;
   val: String;
   tStyle: TextStyle;
+};
+
+type ButtonCellProps = {
+  val: string;
 };
 
 type HeaderCellProps = {
@@ -30,6 +34,24 @@ export class BaseCell extends React.Component<BaseCellProps> {
         <Text style={this.props.tStyle}>{this.props.val}</Text>
       </View>
     );
+  }
+}
+
+export class ButtonCell extends React.Component<ButtonCellProps> {
+  constructor(props: ButtonCellProps) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <View>
+        <Button
+          onPress={() => Alert.alert('Button pressed')}
+          title={this.props.val} 
+        />
+      </View
+      >
+    )
   }
 }
 

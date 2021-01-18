@@ -2,7 +2,7 @@ import React from "react";
 import { View } from "react-native";
 
 import { styles } from "../styles";
-import { HeaderCell, ScoreCell } from "./cell";
+import { ButtonCell, HeaderCell, ScoreCell } from "./cell";
 import Selection from "../services/selection";
 
 type CellGridProps = {
@@ -43,7 +43,11 @@ export class Cells extends React.Component<CellsProps, CellsState> {
     for (let r = 0; r < 10; r++) {
       cells.push(<HeaderCell val={r.toString()} />);
       for (let c = 0; c < 10; c++) {
-        cells.push(<ScoreCell row={r} col={c} display={this.state.selections[s].player} />);
+        if (this.state.selections[s].player != " ") {
+          cells.push(<ScoreCell row={r} col={c} display={this.state.selections[s].player} />);
+        } else {
+          cells.push(<ButtonCell val="Click Me" />);
+        }
         s++;
       }
     }
