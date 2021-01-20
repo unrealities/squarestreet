@@ -46,15 +46,7 @@ export class ButtonCell extends React.Component<ButtonCellProps> {
     return (
       <View style={styles.cellContainer}>
         <Button
-          onPress={() => Alert.alert(
-            'boom',
-            'alertMessage',
-            [
-              {text: 'Cancel', onPress: () => console.log('Cancel Pressed!')},
-              {text: 'OK', onPress: () => console.log('OK Pressed!')},
-            ],
-            { cancelable: false }
-          )}
+          onPress={() => console.log('Button Clicked')}
           title={this.props.val} 
         />
       </View>
