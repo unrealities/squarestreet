@@ -1,5 +1,6 @@
 import React from "react";
-import { Alert, Button, Text, TextStyle, View, ViewStyle } from "react-native";
+import { Button, Text, TextStyle, View, ViewStyle } from "react-native";
+import { NavigatorScreenParams } from '@react-navigation/native';
 
 import { styles } from "../styles";
 
@@ -10,6 +11,7 @@ type BaseCellProps = {
 };
 
 type ButtonCellProps = {
+  navigation: NavigatorScreenParams<{}>;
   val: string;
 };
 
@@ -46,7 +48,7 @@ export class ButtonCell extends React.Component<ButtonCellProps> {
     return (
       <View style={styles.cellContainer}>
         <Button
-          onPress={() => console.log('Button Clicked')}
+          onPress={() => this.props.navigation.navigate('Profile', { name: 'Test' })}
           title={this.props.val} 
         />
       </View>
