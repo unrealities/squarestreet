@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Text, TextStyle, View, ViewStyle } from "react-native";
 import { NavigatorScreenParams } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 import { styles } from "../styles";
 
@@ -45,11 +46,13 @@ export class ButtonCell extends React.Component<ButtonCellProps> {
   }
 
   render() {
+    const navigation = useNavigation();
+
     return (
       <View style={styles.cellContainer}>
         <Button
-          onPress={() => this.props.navigation.navigate('Profile', { name: 'Test' })}
-          title={this.props.val} 
+          onPress={() => navigation.navigate('Profile', { name: 'Test' })}
+          title={this.props.val}
         />
       </View>
     )

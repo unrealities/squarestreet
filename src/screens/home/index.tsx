@@ -20,7 +20,6 @@ export const HomeScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      // TODO: can we pass 'navigation' here?
       <CellGrid selections={selections} />
     </View>
   );
