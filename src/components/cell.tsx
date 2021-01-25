@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, Text, TextStyle, View, ViewStyle } from "react-native";
-import { NavigatorScreenParams } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/native';
 
 import { styles } from "../styles";
@@ -12,7 +11,6 @@ type BaseCellProps = {
 };
 
 type ButtonCellProps = {
-  navigation: NavigatorScreenParams<{}>;
   val: string;
 };
 
@@ -40,23 +38,17 @@ export class BaseCell extends React.Component<BaseCellProps> {
   }
 }
 
-export class ButtonCell extends React.Component<ButtonCellProps> {
-  constructor(props: ButtonCellProps) {
-    super(props);
-  }
+export function ButtonCell(props:ButtonCellProps) {
+  const navigation = useNavigation();
 
-  render() {
-    const navigation = useNavigation();
-
-    return (
-      <View style={styles.cellContainer}>
-        <Button
-          onPress={() => navigation.navigate('Profile', { name: 'Test' })}
-          title={this.props.val}
-        />
-      </View>
-    )
-  }
+  return (
+    <View style={styles.cellContainer}>
+      <Button
+        onPress={() => navigation.navigate('Profile', { name: 'Test' })}
+        title={props.val}
+      />
+    </View>
+  )
 }
 
 export class ScoreCell extends React.Component<ScoreCellProps> {
