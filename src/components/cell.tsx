@@ -43,6 +43,8 @@ export function ButtonCell(props:ButtonCellProps) {
 
   return (
     <View style={styles.cellContainer}>
+      // TODO: This button should automatically update the selections
+      // Need to move to redux to update the global state
       <Button
         onPress={() => navigation.navigate('Profile', { name: 'Test' })}
         title={props.val}
