@@ -1,3 +1,8 @@
+import { combineReducers } from 'redux';
+
+// TODO: https://www.digitalocean.com/community/tutorials/react-react-native-redux
+const INITIAL_STATE = {};
+
 export default class Selection {
   column: Number;
   row: Number;
