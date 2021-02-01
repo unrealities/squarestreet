@@ -1,12 +1,15 @@
 import { combineReducers } from 'redux';
 
+import Selection from "../services/selection";
+import { addSelection } from "../actions/selection";
+
 // TODO: https://www.digitalocean.com/community/tutorials/react-react-native-redux
 const INITIAL_STATE = {
-  current: [],
-  possible: []
+  current: Selection[],
+  possible: Selection[]
 };
 
-const selectionsReducer = (state = INITIAL_STATE, action) => {
+const selectionsReducer = (state = INITIAL_STATE, action:addSelection) => {
   switch (action.type) {
     case 'ADD_SELECTION':
       const {
