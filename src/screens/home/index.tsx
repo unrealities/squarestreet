@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
 import { styles } from "../../styles";
 import { CellGrid } from "../../components/cellGrid";
@@ -26,8 +26,8 @@ export const HomeScreen = ({ navigation }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  const { selection } = state
+const mapStateToProps = (state:Selection) => {
+  let selection = state
   return { selection }
 };
 
