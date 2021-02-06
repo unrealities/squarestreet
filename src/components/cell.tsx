@@ -1,8 +1,10 @@
 import React from "react";
 import { Button, Text, TextStyle, View, ViewStyle } from "react-native";
 import { useNavigation } from '@react-navigation/native';
+import { bindActionCreators } from "redux";
 
 import { styles } from "../styles";
+import { addSelection } from "../actions/selection";
 
 type BaseCellProps = {
   vStyle: ViewStyle;
@@ -46,7 +48,7 @@ export function ButtonCell(props:ButtonCellProps) {
       // TODO: This button should automatically update the selections
       // Need to move to redux to update the global state
       <Button
-        onPress={() => navigation.navigate('Profile', { name: 'Test' })}
+        onPress={() => this.props.addSelection('Gravy')}
         title={props.val}
       />
     </View>
