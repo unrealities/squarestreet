@@ -1,11 +1,9 @@
 import React from "react";
 import { View } from "react-native";
-import { bindActionCreators } from "redux";
 
 import { styles } from "../styles";
 import { ButtonCell, HeaderCell, ScoreCell } from "./cell";
 import Selection from "../services/selection";
-import { addSelection } from "../actions/selection";
 
 type CellGridProps = {
   selections: Selection[];
