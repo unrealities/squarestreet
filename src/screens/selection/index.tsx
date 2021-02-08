@@ -3,11 +3,16 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Text, View, Button } from 'react-native';
 import { addSelection } from '../../actions/selection';
+import Selection from '../../services/selection';
 
-class SelectionScreen extends React.Component {
+type SelectionScreenProps = {
+  selections: Selection[];
+};
+
+class SelectionScreen extends React.Component<SelectionScreenProps> {
   render() {
     return (
-      <View}>
+      <View>
         <Text>Add Selections</Text>
 
         {
