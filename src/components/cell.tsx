@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, Text, TextStyle, View, ViewStyle } from "react-native";
-import { useNavigation } from '@react-navigation/native';
 import { bindActionCreators } from "redux";
 
 import { styles } from "../styles";
@@ -41,8 +40,6 @@ export class BaseCell extends React.Component<BaseCellProps> {
 }
 
 export function ButtonCell(props:ButtonCellProps) {
-  const navigation = useNavigation();
-
   return (
     <View style={styles.cellContainer}>
       // TODO: This button should automatically update the selections

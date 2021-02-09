@@ -2,23 +2,28 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Text, View, Button } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+
 import { addSelection } from '../../actions/selection';
 import Selection from '../../services/selection';
 
 type SelectionScreenProps = {
   selections: Selection[];
+  addSelection: Function;
 };
 
 class SelectionScreen extends React.Component<SelectionScreenProps> {
   render() {
+    const navigation = useNavigation();
+
     return (
       <View>
         <Text>Add Selections</Text>
 
         {
-          this.props.selections.possible.map((selection, index) => (
+          this.props.selections.map((selection, index) => (
             <Button
-              key={ selection }
+              key={ index }
               title={ `Add ${ selection }` }
               onPress={() =>
                 this.props.addSelection(index)
@@ -30,7 +35,7 @@ class SelectionScreen extends React.Component<SelectionScreenProps> {
         <Button
           title="Back to home"
           onPress={() =>
-            this.props.navigation.navigate('Home')
+            navigation.navigate('Home')
           }
         />
       </View>
