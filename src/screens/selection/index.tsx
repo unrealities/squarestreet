@@ -23,8 +23,8 @@ class SelectionScreen extends React.Component<SelectionScreenProps> {
         {
           this.props.selections.map((selection, index) => (
             <Button
-              key={ index }
-              title={ `Add ${ selection }` }
+              key={index}
+              title={`Add ${selection}`}
               onPress={() =>
                 this.props.addSelection(index)
               }

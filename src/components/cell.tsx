@@ -1,9 +1,7 @@
 import React from "react";
 import { Button, Text, TextStyle, View, ViewStyle } from "react-native";
-import { bindActionCreators } from "redux";
 
 import { styles } from "../styles";
-import { addSelection } from "../actions/selection";
 
 type BaseCellProps = {
   vStyle: ViewStyle;
@@ -39,7 +37,7 @@ export class BaseCell extends React.Component<BaseCellProps> {
   }
 }
 
-export function ButtonCell(props:ButtonCellProps) {
+export function ButtonCell(props: ButtonCellProps) {
   return (
     <View style={styles.cellContainer}>
       // TODO: This button should automatically update the selections

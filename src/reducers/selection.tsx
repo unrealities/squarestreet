@@ -11,7 +11,7 @@ const INITIAL_STATE = {
   possible: possible
 };
 
-const selectionsReducer = (state = INITIAL_STATE, action:addSelectionAction) => {
+const selectionsReducer = (state = INITIAL_STATE, action: addSelectionAction) => {
   switch (action.type) {
     case 'ADD_SELECTION':
       const {

@@ -1,5 +1,8 @@
 import { Button, Text, View } from "react-native";
 import { styles } from "../../styles";
+import { useNavigation } from '@react-navigation/native';
+
+const navigation = useNavigation();
 
 const AboutScreen = () => (
   <View style={styles.container}>

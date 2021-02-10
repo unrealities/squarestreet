@@ -34,7 +34,7 @@ export class CellGrid extends React.Component<CellGridProps> {
 export class Cells extends React.Component<CellsProps, CellsState> {
   constructor(props: CellsProps) {
     super(props);
-    this.state = {selections: this.props.selections};
+    this.state = { selections: this.props.selections };
   }
   render() {
     const cells = [];
