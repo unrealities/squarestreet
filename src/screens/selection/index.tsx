@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import { bindActionCreators, mapStateToProps } from 'redux';
 import { Text, View, Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 

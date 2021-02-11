@@ -40,8 +40,6 @@ export class BaseCell extends React.Component<BaseCellProps> {
 export function ButtonCell(props: ButtonCellProps) {
   return (
     <View style={styles.cellContainer}>
-      // TODO: This button should automatically update the selections
-      // Need to move to redux to update the global state
       <Button
         onPress={() => this.props.addSelection('Gravy')}
         title={props.val}
