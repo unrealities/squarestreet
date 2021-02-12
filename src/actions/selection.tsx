@@ -1,9 +1,9 @@
 export interface addSelectionAction {
-    type: string,
-    payload: number
+    type: String,
+    payload: Number
 }
 
-export const addSelection = (selectionIndex: number) => (
+export const addSelection = (selectionIndex: Number) => (
     {
         type: 'ADD_SELECTION',
         payload: selectionIndex

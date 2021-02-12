@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Text, TextStyle, View, ViewStyle } from "react-native";
 
+import { addSelection } from "../actions/selection";
 import { styles } from "../styles";
 
 type BaseCellProps = {
@@ -10,6 +11,7 @@ type BaseCellProps = {
 };
 
 type ButtonCellProps = {
+  index: Number;
   val: string;
 };
 
@@ -41,7 +43,7 @@ export function ButtonCell(props: ButtonCellProps) {
   return (
     <View style={styles.cellContainer}>
       <Button
-        onPress={() => this.props.addSelection('Gravy')}
+        onPress={() => addSelection(props.index)}
         title={props.val}
       />
     </View>
