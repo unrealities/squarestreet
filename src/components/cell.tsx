@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Text, TextStyle, View, ViewStyle } from "react-native";
+import { useNavigation } from '@react-navigation/native';
 
 import { addSelection } from "../actions/selection";
 import { styles } from "../styles";
@@ -40,10 +41,12 @@ export class BaseCell extends React.Component<BaseCellProps> {
 }
 
 export function ButtonCell(props: ButtonCellProps) {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.cellContainer}>
       <Button
-        onPress={() => addSelection(props.index)}
+        onPress={() => navigation.navigate('SelectionScreen')}
         title={props.val}
       />
     </View>
