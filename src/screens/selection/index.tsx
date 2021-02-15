@@ -9,19 +9,7 @@ import Selection from '../../services/selection';
 export const SelectionScreen = ({ navigation, route }) => {
   return (
     <View>
-      <Text>Add Selections</Text>
-
-      {
-        this.props.selections.map((selection, index) => (
-          <Button
-            key={index}
-            title={`Add ${selection}`}
-            onPress={() =>
-              this.props.addSelection(index)
-            }
-          />
-        ))
-      }
+      <Text>Add Selection {route.params.index}</Text>
 
       <Button
         title="Back to home"

@@ -46,7 +46,7 @@ export function ButtonCell(props: ButtonCellProps) {
   return (
     <View style={styles.cellContainer}>
       <Button
-        onPress={() => navigation.navigate('SelectionScreen')}
+        onPress={() => navigation.navigate('SelectionScreen',{index: props.index})}
         title={props.val}
       />
     </View>
