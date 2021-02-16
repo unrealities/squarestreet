@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators, mapStateToProps } from 'redux';
+import { bindActionCreators } from 'redux';
 import { Text, View, Button } from 'react-native';
 
 import { addSelection } from '../../actions/selection';
@@ -21,10 +21,10 @@ export const SelectionScreen = ({ navigation, route }) => {
   );
 }
 
-const mapDispatchToProps = dispatch => (
-  bindActionCreators({
-    addSelection,
-  }, dispatch)
-);
+// const mapDispatchToProps = dispatch => (
+//   bindActionCreators({
+//     addSelection,
+//   }, dispatch)
+// );
 
-export default connect(mapStateToProps, mapDispatchToProps)(SelectionScreen);
+// export default connect(mapStateToProps, mapDispatchToProps)(SelectionScreen);

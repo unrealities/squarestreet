@@ -3,6 +3,7 @@ import { Button, Text, TextStyle, View, ViewStyle } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 
 import { addSelection } from "../actions/selection";
+import { SelectionScreen } from "../screens/selection";
 import { styles } from "../styles";
 
 type BaseCellProps = {
