@@ -9,7 +9,7 @@ import Selection from '../../services/selection';
 export const SelectionScreen = ({ navigation, route }) => {
   return (
     <View>
-      <Text>Add Selection {route.params.index}</Text>
+      <Text>Add Selection {route.params.col} {route.params.row}</Text>
 
       <Button
         title="Back to home"

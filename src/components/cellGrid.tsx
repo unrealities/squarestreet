@@ -46,7 +46,7 @@ export class Cells extends React.Component<CellsProps, CellsState> {
         if (this.state.selections[s].player != " ") {
           cells.push(<ScoreCell row={r} col={c} display={this.state.selections[s].player} />);
         } else {
-          cells.push(<ButtonCell val="Purchase Square" />);
+          cells.push(<ButtonCell val="Purchase Square" row={r} col={c}/>);
         }
         s++;
       }

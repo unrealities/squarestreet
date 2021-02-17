@@ -13,7 +13,8 @@ type BaseCellProps = {
 };
 
 type ButtonCellProps = {
-  index: Number;
+  row: Number;
+  col: Number;
   val: string;
 };
 
@@ -47,7 +48,7 @@ export function ButtonCell(props: ButtonCellProps) {
   return (
     <View style={styles.cellContainer}>
       <Button
-        onPress={() => navigation.navigate('SelectionScreen',{index: props.index})}
+        onPress={() => navigation.navigate('SelectionScreen',{col: props.col, row: props.row})}
         title={props.val}
       />
     </View>
