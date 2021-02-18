@@ -4,6 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import { HomeScreen } from "../screens/home";
 import { ProfileScreen } from "../screens/profile";
+import { SelectionScreen } from "../screens/selection";
 
 const Stack = createStackNavigator();
 
@@ -17,6 +18,7 @@ export const MyStack = () => {
           options={{ title: "Square Street" }}
         />
         <Stack.Screen name="Profile" component={ProfileScreen} />
+        <Stack.Screen name="Selection" component={SelectionScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
