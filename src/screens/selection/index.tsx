@@ -21,10 +21,15 @@ export const SelectionScreen = ({ navigation, route }) => {
   );
 }
 
-// const mapDispatchToProps = dispatch => (
-//   bindActionCreators({
-//     addSelection,
-//   }, dispatch)
-// );
+const mapStateToProps = (state: Selection) => {
+  let selection = state
+  return { selection }
+};
 
-// export default connect(mapStateToProps, mapDispatchToProps)(SelectionScreen);
+const mapDispatchToProps = dispatch => (
+  bindActionCreators({
+    addSelection,
+  }, dispatch)
+);
+
+export default connect(mapStateToProps, mapDispatchToProps)(SelectionScreen);

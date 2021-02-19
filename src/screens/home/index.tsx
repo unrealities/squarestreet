@@ -26,7 +26,7 @@ export const HomeScreen = ({ navigation }) => {
   );
 };
 
-const mapStateToProps = (state: Selection) => {
+export const mapStateToProps = (state: Selection) => {
   let selection = state
   return { selection }
 };
