@@ -4,7 +4,6 @@ import { bindActionCreators } from 'redux';
 import { Text, View, Button } from 'react-native';
 
 import { addSelection } from '../../actions/selection';
-import Selection from '../../services/selection';
 
 export const SelectionScreen = ({ navigation, route }) => {
   return (
@@ -21,9 +20,9 @@ export const SelectionScreen = ({ navigation, route }) => {
   );
 }
 
-const mapStateToProps = (state: Selection) => {
-  let selection = state
-  return { selection }
+const mapStateToProps = (state) => {
+  const { selections } = state
+  return { selections }
 };
 
 const mapDispatchToProps = dispatch => (
