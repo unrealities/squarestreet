@@ -1,3 +1,5 @@
+import { ADD_SELECTION } from './types';
+
 export interface addSelectionAction {
     type: String,
     payload: Number
@@ -5,7 +7,7 @@ export interface addSelectionAction {
 
 export const addSelection = (selectionIndex: Number) => (
     {
-        type: 'ADD_SELECTION',
+        type: ADD_SELECTION,
         payload: selectionIndex
     }
 );
