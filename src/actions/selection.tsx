@@ -1,13 +1,14 @@
 import { ADD_SELECTION } from './types';
+import { Selection } from '../services/selection';
 
 export interface addSelectionAction {
     type: String,
-    payload: Number
+    payload: Selection
 }
 
-export const addSelection = (selectionIndex: Number) => (
+export const addSelection = (selection: Selection) => (
     {
         type: ADD_SELECTION,
-        payload: selectionIndex
+        payload: selection
     }
 );

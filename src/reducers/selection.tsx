@@ -20,7 +20,7 @@ const selectionsReducer = (state = INITIAL_STATE, action: addSelectionAction) =>
         possible
       } = state;
 
-      const addedSelection = possible.splice(action.payload, 1);
+      const addedSelection = possible.splice(action.payload, 1); //TODO: update possible
       current.push(addedSelection);
       const newState = { current, possible };
 
