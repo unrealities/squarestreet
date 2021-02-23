@@ -1,1 +1,2 @@
 export const ADD_SELECTION = 'ADD_SELECTION';
+export const ADD_POSSIBLE = 'ADD_POSSIBLE';
