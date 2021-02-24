@@ -1,5 +1,5 @@
 import { ADD_SELECTION } from './types';
-import { Selection } from '../services/selection';
+import Selection from '../services/selection';
 
 export interface addSelectionAction {
     type: String,
