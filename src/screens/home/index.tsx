@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 import { styles } from "../../styles";
 import { CellGrid } from "../../components/cellGrid";
-
+import { addSelection } from "../../actions/selection";
 import Selection from "../../services/selection";
 
 export const HomeScreen = ({ navigation }) => {
@@ -15,6 +15,7 @@ export const HomeScreen = ({ navigation }) => {
     for (let c = 0; c < 10; c++) {
       let randPlayer = players[(Math.random() * players.length) | 0];
       let s = new Selection(r, c, randPlayer);
+      addSelection(s);
       selections.push(s);
     }
   }
