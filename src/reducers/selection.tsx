@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { ADD_SELECTION } from '../actions//types';
+import { ACTION_TYPES } from '../actions/types';
 
 import Selection from "../services/selection";
 import { addSelection, addSelectionAction } from "../actions/selection";
@@ -14,7 +14,7 @@ const INITIAL_STATE = {
 
 const selectionsReducer = (state = INITIAL_STATE, action: addSelectionAction) => {
   switch (action.type) {
-    case ADD_SELECTION:
+    case ACTION_TYPES.ADD_SELECTION:
       const {
         current,
         possible
