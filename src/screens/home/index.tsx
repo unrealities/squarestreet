@@ -22,7 +22,7 @@ export const HomeScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <CellGrid selections={selections} />
+      <CellGrid selections={this.props.current.selections} />
     </View>
   );
 };
