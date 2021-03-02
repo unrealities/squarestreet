@@ -7,7 +7,12 @@ import { CellGrid } from "../../components/cellGrid";
 import { addSelection } from "../../actions/selection";
 import Selection from "../../services/selection";
 
-export class HomeScreen extends React.Component {
+type HomeScreenProps = {
+  current: Array<Selection>,
+  possible: Array<Selection>
+};
+
+export class HomeScreen extends React.Component<HomeScreenProps> {
   render() {
     const players = ["Abe", "Betty", "Carl", "Diana", "Edward", " "];
     const selections = [];
@@ -23,7 +28,7 @@ export class HomeScreen extends React.Component {
   
     return (
       <View style={styles.container}>
-        <CellGrid selections={this.props.current.selections} />
+        <CellGrid selections={this.props.current} />
       </View>
     );
   }
